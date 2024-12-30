@@ -8,8 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/getAllUsers', [UserController::class, 'getAllUsers']);
-Route::post('/addNewUser', [UserController::class, 'addNewUser']);
-Route::delete('/deleteUser', [UserController::class, 'deleteUser']);
-Route::put('/editUser', [UserController::class, 'editUser']);
-Route::get('/searchUser', [UserController::class, 'searchUser']);
+Route::prefix('api')->group(function () {
+    Route::get('/getAllUsers', [UserController::class, 'getAllUsers']);
+    Route::post('/addNewUser', [UserController::class, 'addNewUser']);
+    Route::delete('/deleteUser', [UserController::class, 'deleteUser']);
+    Route::put('/editUser', [UserController::class, 'editUser']);
+    Route::get('/searchUser', [UserController::class, 'searchUser']);
+});
