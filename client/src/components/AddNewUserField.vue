@@ -151,7 +151,10 @@ export default {
         endDate: this.formatDateDayMonthYear(this.endDate),
       }
       axios
-        .post(import.meta.env.VITE_SERVER_URL + '/addNewUser', formData)
+        .post(import.meta.env.VITE_SERVER_URL + '/addNewUser', formData,
+        headers: {
+        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        })
         .then((res) => {
           this.userStore.addNewUser(res.data)
         })
