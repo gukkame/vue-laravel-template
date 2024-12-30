@@ -9,3 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/getAllUsers', [UserController::class, 'getAllUsers']);
+Route::post('/addNewUser', [UserController::class, 'addNewUser']);
+Route::delete('/deleteUser', [UserController::class, 'deleteUser']);
+Route::put('/editUser', [UserController::class, 'editUser']);
+Route::get('/searchUser', [UserController::class, 'searchUser']);
