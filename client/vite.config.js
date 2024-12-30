@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   server: {
     host: '0.0.0.0', // Bind to all IPs
-    port: process.env.PORT || 8080, // Use Railway's PORT or default to 3000
+    port: 8080, // Use Railway's PORT or default to 3000
   },
   resolve: {
     alias: {
