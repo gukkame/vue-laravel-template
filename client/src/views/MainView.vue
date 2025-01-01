@@ -57,7 +57,7 @@ export default {
     },
     fetchAllUsers() {
       axios
-        .get(import.meta.env.VITE_SERVER_URL + '/getAllUsers')
+        .get(import.meta.env.VITE_SERVER_URL + '/api/getAllUsers')
         .then((res) => {
           console.log(res.data);
           
@@ -65,7 +65,7 @@ export default {
           this.allUsers = res.data
         })
         .catch((error) => {
-          console.error('Error at all user data fetching: ' + error)
+          console.error('Error at fetching all users: ' + error)
         })
     }
   }

@@ -57,7 +57,7 @@ export default {
     },
     fetchUserStatistics() {
       axios
-        .get(import.meta.env.VITE_SERVER_URL + '/getStatistics')
+        .get(import.meta.env.VITE_SERVER_URL + '/api/getStatistics')
         .then((res) => {
           this.userStats = res.data
         })

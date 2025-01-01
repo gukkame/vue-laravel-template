@@ -65,7 +65,7 @@ export default {
       this.userStore.setSearchedUsers([])
       return
       axios
-        .post(import.meta.env.VITE_SERVER_URL + '/searchUser', { lastName: this.lastName })
+        .post(import.meta.env.VITE_SERVER_URL + '/api/searchUser', { lastName: this.lastName })
         .then((response) => {
           console.log(response.data)
           // this.userStore.setSearchedUsers(response.data || [])

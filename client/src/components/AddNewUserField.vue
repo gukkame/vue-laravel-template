@@ -151,7 +151,7 @@ export default {
         endDate: this.formatDateDayMonthYear(this.endDate),
       }
       axios
-        .post(import.meta.env.VITE_SERVER_URL + '/addNewUser', formData)
+        .post(import.meta.env.VITE_SERVER_URL + '/api/addNewUser', formData)
         .then((res) => {
           this.userStore.addNewUser(res.data)
         })

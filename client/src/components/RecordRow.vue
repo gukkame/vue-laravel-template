@@ -344,7 +344,7 @@ export default {
         endDate: this.formatDateDayMonthYear(this.newUserEndDate)
       }
       axios
-        .post(import.meta.env.VITE_SERVER_URL + '/addNewUser', formData)
+        .post(import.meta.env.VITE_SERVER_URL + '/api/addNewUser', formData)
         .then((res) => {
           this.userStore.addNewUser(res.data)
         })
@@ -376,7 +376,7 @@ export default {
         Status: this.isActive
       }
       axios
-        .post(import.meta.env.VITE_SERVER_URL + '/editUser', formData)
+        .post(import.meta.env.VITE_SERVER_URL + '/api/editUser', formData)
         .then((res) => {      
           this.editableEndDate = this.formatDateYearMonthDay(res.data.EndDate)
           this.editableStartDate = this.formatDateYearMonthDay(res.data.StartDate)
@@ -400,7 +400,7 @@ export default {
 
     deleteRecord() {
       axios
-        .post(import.meta.env.VITE_SERVER_URL + '/deleteUser', { Id: this.id })
+        .post(import.meta.env.VITE_SERVER_URL + '/api/deleteUser', { Id: this.id })
         .then((res) => {
           console.log(res.data.message)
         })
