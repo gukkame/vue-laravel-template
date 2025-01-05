@@ -12,8 +12,8 @@ Make sure you have the following installed:
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/your-repo/vue-php-registration-system.git
-    cd vue-php-registration-system
+    git clone https://github.com/gukkame/vue-laravel-template.git
+    cd laravel-php-template
     ```
 
 2. **Install PHP dependencies:**
